@@ -125,7 +125,7 @@ public class HeroKnight : MonoBehaviour {
             // Reset timer
             m_timeSinceAttack = 0.0f;
         }
-
+        /*
         // Block
         else if (Input.GetMouseButtonDown(1) && !m_rolling)
         {
@@ -135,7 +135,7 @@ public class HeroKnight : MonoBehaviour {
 
         else if (Input.GetMouseButtonUp(1))
             m_animator.SetBool("IdleBlock", false);
-
+        */
         // Roll
         else if (Input.GetKeyDown("left shift") && !m_rolling && !m_isWallSliding)
         {
