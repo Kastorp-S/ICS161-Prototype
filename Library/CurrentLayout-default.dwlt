@@ -123,7 +123,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 126
+  controlID: 151
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 442}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 42
+  controlID: 126
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -197,8 +197,8 @@ MonoBehaviour:
     y: 538
     width: 1005
     height: 409
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 63
+  controlID: 19
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -460,9 +460,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3.1355228, y: 0.42543346, z: -4.872795}
+    m_Target: {x: 1.6348132, y: -1.6061499, z: -1.5348053}
     speed: 2
-    m_Value: {x: -3.1355228, y: 0.42543346, z: -4.872795}
+    m_Value: {x: 1.6348132, y: -1.6061499, z: -1.5348053}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -509,13 +509,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.14940317, y: 0.33284897, z: -0.05336099, w: 0.92960304}
+    m_Target: {x: 0.21070738, y: 0.09547376, z: -0.020564552, w: 0.9727207}
     speed: 2
-    m_Value: {x: 0.14931408, y: 0.33422312, z: -0.05358185, w: 0.92904747}
+    m_Value: {x: 0.21066354, y: 0.09692686, z: -0.020879326, w: 0.9725175}
   m_Size:
-    m_Target: 6.8649645
+    m_Target: 8.863478
     speed: 2
-    m_Value: 6.8649645
+    m_Value: 8.863478
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -701,21 +701,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 4274ffffce94fffffec3ffff3af0ffff5ef0ffffd0f0ffff9ef2ffff0ef3ffff2afafffff03d0000f43d0000
+      m_ExpandedIDs: bcdbffff02dcffff04dfffff90e1ffff52fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: shard4
-        m_OriginalName: shard4
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -27482
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 10}
       m_SearchString: 
@@ -763,22 +763,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefab
+    - Assets/Hero and Opponents/Sprites/Enemy1
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefab
+  - Assets/Hero and Opponents/Sprites/Enemy1
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\PYUM PYUM PYUM PYUM\Documents\GitHub\ICS161-Prototype
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 223f0000
-    m_LastClickedID: 16162
-    m_ExpandedIDs: 00000000183f000000ca9a3b
+    m_SelectedIDs: 763f0000
+    m_LastClickedID: 16246
+    m_ExpandedIDs: 000000009e3e0000723f00007c3f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -806,7 +806,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000183f0000
+    m_ExpandedIDs: 000000009e3e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -837,15 +837,15 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: 1ac6ffff36340000c63b0000803f0000f4400000ea420000b03c0000c810000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Box
-      m_OriginalName: Box
+      m_Name: attack-A5
+      m_OriginalName: attack-A5
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -31920
+      m_UserData: 16886
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
