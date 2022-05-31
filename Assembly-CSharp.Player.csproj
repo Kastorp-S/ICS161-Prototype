@@ -59,10 +59,10 @@
     <Compile Include="Assets\Scripts\UnitHP.cs" />
     <Compile Include="Assets\Hero Knight - Pixel Art\Demo\HeroKnight.cs" />
     <Compile Include="Assets\Scripts\Destructable.cs" />
+    <Compile Include="Assets\Scripts\Spike.cs" />
     <Compile Include="Assets\Hero Knight - Pixel Art\ColorSwap\ColorSwap_HeroKnight.cs" />
     <Compile Include="Assets\Hero Knight - Pixel Art\Demo\DestroyEvent_HeroKnight.cs" />
     <Compile Include="Assets\Scripts\EnemyHP.cs" />
-    <Compile Include="Assets\Scripts\Spike.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Hero and Opponents\license.txt" />

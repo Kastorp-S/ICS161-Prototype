@@ -28,6 +28,7 @@ public class HeroKnight : MonoBehaviour {
     private float               m_delayToIdle = 0.0f;
     private float               m_rollDuration = 8.0f / 14.0f;
     private float               m_rollCurrentTime;
+    public bool alive = true;
 
 
     // Use this for initialization
@@ -87,7 +88,7 @@ public class HeroKnight : MonoBehaviour {
         }
 
         // Move
-        if (!m_rolling )
+        if (alive && !m_rolling )
             m_body2d.velocity = new Vector2(inputX * m_speed, m_body2d.velocity.y);
 
         //Set AirSpeed in animator
@@ -110,7 +111,7 @@ public class HeroKnight : MonoBehaviour {
             m_animator.SetTrigger("Hurt");
 
         //Attack
-        else if(Input.GetMouseButtonDown(0) && m_timeSinceAttack > 0.25f && !m_rolling)
+        else if(alive && Input.GetMouseButtonDown(0) && m_timeSinceAttack > 0.25f && !m_rolling)
         {
             m_currentAttack++;
 
@@ -132,8 +133,12 @@ public class HeroKnight : MonoBehaviour {
 
             foreach (Collider2D enemy in hitEnemies)
             {
-                //Debug.Log("Hit");
-                enemy.gameObject.GetComponent<UnitHP>().TakeDamage(attackDamage);
+                if (enemy.CompareTag("Cube"))
+                {
+                    enemy.GetComponentInParent<Destructable>().BreakBox();
+                }
+                enemy.gameObject.GetComponent<UnitHP>().TakeDamage(attackDamage + 5 * (m_currentAttack-1));
+
             }
         }
         /*
@@ -148,7 +153,7 @@ public class HeroKnight : MonoBehaviour {
             m_animator.SetBool("IdleBlock", false);
         */
         // Roll
-        else if (Input.GetKeyDown("left shift") && !m_rolling && !m_isWallSliding)
+        else if (alive && Input.GetKeyDown("left shift") && !m_rolling && !m_isWallSliding)
         {
             m_rolling = true;
             m_animator.SetTrigger("Roll");
@@ -157,7 +162,7 @@ public class HeroKnight : MonoBehaviour {
             
 
         //Jump
-        else if (Input.GetKeyDown("space") && m_grounded && !m_rolling)
+        else if (alive && Input.GetKeyDown("space") && m_grounded && !m_rolling)
         {
             m_animator.SetTrigger("Jump");
             m_grounded = false;
@@ -167,7 +172,7 @@ public class HeroKnight : MonoBehaviour {
         }
 
         //Run
-        else if (Mathf.Abs(inputX) > Mathf.Epsilon)
+        else if (alive && Mathf.Abs(inputX) > Mathf.Epsilon)
         {
             // Reset timer
             m_delayToIdle = 0.05f;
@@ -209,5 +214,11 @@ public class HeroKnight : MonoBehaviour {
         {
             this.gameObject.GetComponent<UnitHP>().TakeDamage(3f);
         }
+    }
+    public void DeathAnim()
+    {
+        alive = false;
+        m_animator.SetBool("noBlood", m_noBlood);
+        m_animator.SetTrigger("Death");
     }
 }

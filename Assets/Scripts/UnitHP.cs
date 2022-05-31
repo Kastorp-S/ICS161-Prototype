@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class UnitHP : MonoBehaviour
 {
+    public bool alive = true;
     private float currentHealth;
     [SerializeField] private float maxHealth;
     [SerializeField] private Slider healthSlider;
@@ -44,9 +45,10 @@ public class UnitHP : MonoBehaviour
         //Debug.Log("Current Health is: " + currentHealth);
         if (currentHealth <= 0)
         {
-            if (this.gameObject.CompareTag("Player"))
+            alive = false;
+            if (this.gameObject.CompareTag("Player") && this.GetComponent<HeroKnight>().alive)
             {
-                //You died
+                this.GetComponent<HeroKnight>().DeathAnim();
             }
             else
             {

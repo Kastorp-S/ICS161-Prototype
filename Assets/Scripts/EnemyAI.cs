@@ -8,7 +8,7 @@ public class EnemyAI : MonoBehaviour
     public bool dead = false;
     [SerializeField] private int baseAttackCooldown = 60;
     private int attackCooldown;
-    private int detection = 15;
+    [SerializeField] private int detection = 15;
     [SerializeField] private Transform player;
     Animator animator;
     [SerializeField] private float speed;
@@ -79,7 +79,11 @@ public class EnemyAI : MonoBehaviour
         foreach(Collider2D enemy in hitEnemies)
         {
             //Debug.Log("Hit");
-            enemy.gameObject.GetComponent<UnitHP>().TakeDamage(5f);
+            if (enemy.GetComponent<UnitHP>().alive)
+            {
+                enemy.GetComponent<UnitHP>().TakeDamage(5f);
+            }
+            
         }
     }
 

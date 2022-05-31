@@ -9,8 +9,12 @@ public class Destructable : MonoBehaviour
     {
         if (other is CapsuleCollider)
         {
-            Instantiate(destroyedVersion, transform.position, transform.rotation);
-            Destroy(gameObject);
+            BreakBox();
         }
+    }
+    public void BreakBox()
+    {
+        Instantiate(destroyedVersion, transform.position, transform.rotation);
+        Destroy(gameObject);
     }
 }
