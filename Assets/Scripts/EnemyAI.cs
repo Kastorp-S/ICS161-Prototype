@@ -74,17 +74,24 @@ public class EnemyAI : MonoBehaviour
     void Attack()
     {
 
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange);
-
-        foreach(Collider2D enemy in hitEnemies)
+        Collider2D enemy = Physics2D.OverlapCircle(attackPoint.position, attackRange);
+        
+        Debug.Log("Hit");
+        if (enemy.GetComponent<UnitHP>().alive)
         {
-            //Debug.Log("Hit");
-            if (enemy.GetComponent<UnitHP>().alive)
-            {
-                enemy.GetComponent<UnitHP>().TakeDamage(5f);
-            }
-            
+            enemy.GetComponent<UnitHP>().TakeDamage(5f);
         }
+        
+        /*
+        if (hitEnemies.Length != 0)
+        {
+            Debug.Log("Hit");
+            if (hitEnemies[0].GetComponent<UnitHP>().alive)
+            {
+                hitEnemies[0].GetComponent<UnitHP>().TakeDamage(5f);
+            }
+        }
+        */
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -65,7 +65,9 @@
     <Compile Include="Assets\Scripts\EnemyHP.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Bringer Of Death\License.txt" />
     <None Include="Assets\Hero and Opponents\license.txt" />
+    <None Include="Assets\Bringer Of Death\Contact.txt" />
     <None Include="Assets\Hero Knight - Pixel Art\ColorSwap\Sprites-ColorSwap.shader" />
   </ItemGroup>
   <ItemGroup>
